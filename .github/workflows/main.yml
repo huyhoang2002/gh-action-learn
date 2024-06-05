@@ -1,9 +1,14 @@
 name: "my-gh-action"
-run-name: "testing this pipeline"
+run-name: "{{ git.actor }} is running a pipeline"
 on: [push]
+
 jobs:
-  Explore-Github-Action:
+  check-version:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello world Github action"
-  
+      - uses: Azure/webapps-deploy@v2.2.12
+        with:
+          # Name of the Azure Web App
+          app-name: my-html-app
+          package: ${{ github.workspace }}
+          
