@@ -1,14 +1,17 @@
 name: "my-gh-action"
-run-name: "{{ git.actor }} is running a pipeline"
+run-name: "${{ git.actor }} is running a pipeline"
 on: [push]
 
 jobs:
   check-version:
     runs-on: ubuntu-latest
     steps:
+      - uses: Azure/login@v2.1.0
+        with: 
+          subscription-id: 773fd438-c816-42fe-80d2-a144b1f42852
+          tenant-id: f15dd8d1-822a-4009-bdbf-57951d225a99
       - uses: Azure/webapps-deploy@v2.2.12
         with:
-          # Name of the Azure Web App
           app-name: my-html-app
           package: ${{ github.workspace }}
           
