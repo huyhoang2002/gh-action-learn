@@ -1,0 +1,9 @@
+name: "my-gh-action"
+run-name: "testing this pipeline"
+on: [push]
+jobs:
+  Explore-Github-Action:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello world Github action"
+  
