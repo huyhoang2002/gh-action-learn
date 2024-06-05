@@ -1,5 +1,5 @@
 name: "my-gh-action"
-run-name: "${{ git.actor }} is running a pipeline"
+run-name: "${{ github.actor }} is running a pipeline"
 on: [push]
 
 jobs:
