@@ -22,5 +22,6 @@ jobs:
           # Name of the Azure Web App
           app-name: my-gh-app
           type: Static
+          allow-no-subscriptions: true
         
           
