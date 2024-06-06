@@ -8,9 +8,7 @@ jobs:
     steps:
       - uses: Azure/login@v2.1.0
         with: 
-          subscription-id: ${{ github.AZURE_SUBSCRIPTION_ID }}
-          tenant-id: ${{ github.AZURE_TENANT_ID }}
-          client-id: ${{ github.AZURE_CLIENT_ID }}
+          creds: ${{ github.AZURE_CRED }}
           enable-AzPSSession: true
       - uses: Azure/webapps-deploy@v2.2.12
         with:
