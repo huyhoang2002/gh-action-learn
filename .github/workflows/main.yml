@@ -12,7 +12,9 @@ jobs:
     steps:
       - uses: Azure/login@v2.1.0
         with: 
-          creds: ${{ secrets.AZURE_CRED }}
+          auth-type: IDENTITY
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           enable-AzPSSession: true
       - uses: Azure/webapps-deploy@v2.2.12
         with:
