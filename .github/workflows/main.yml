@@ -14,7 +14,7 @@ jobs:
         with:
           # Azure client id
           client_id: ${{ secrets.AZURE_CLIENT_ID }} 
-          client_secret: ${{ secrets.AZURE_CLIENT_SECRET }
+          client_secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           # Azure subscription id
           subscription_id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
           # Azure tenant id
