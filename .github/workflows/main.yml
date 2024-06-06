@@ -18,6 +18,6 @@ jobs:
           allow-no-subscriptions: true
       - uses: Azure/cli@v1.0.6
         with:
-           inlineScript: az account show
+           inlineScript: az webapp up -g webapp-resource-group --name my-gh-app --os-type=linux
 
           
