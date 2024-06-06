@@ -20,4 +20,6 @@ jobs:
         with:
           app-name: my-html-app
           package: ${{ secrets.workspace }}
+          resource-group-name: webapp-resource-group
+          target-path: /
           
