@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: Azure/login@hf_447_release
         with: 
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          client-id: 7d9337ce-826d-4f2c-a251-59fc9623652e
+          tenant-id: 5bb0c9b3-b167-4d84-8694-ea7e8aa516e8
           subscription-id: b2a47d1d-3039-4e62-883a-35e3c288ac66
           enable-AzPSSession: true
         
