@@ -21,7 +21,6 @@ jobs:
         with:
           # Name of the Azure Web App
           app-name: my-gh-app
-          publish-profile: linux
           type: Static
         
           
