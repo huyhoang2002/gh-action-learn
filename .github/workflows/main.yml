@@ -8,8 +8,9 @@ jobs:
     steps:
       - uses: Azure/login@v2.1.0
         with: 
-          subscription-id: 773fd438-c816-42fe-80d2-a144b1f42852
-          tenant-id: f15dd8d1-822a-4009-bdbf-57951d225a99
+          subscription-id: b2a47d1d-3039-4e62-883a-35e3c288ac66
+          tenant-id: 5bb0c9b3-b167-4d84-8694-ea7e8aa516e8
+          client-id: 646803a9-84fb-4fc7-b77a-8070e4fcc3a9
       - uses: Azure/webapps-deploy@v2.2.12
         with:
           app-name: my-html-app
