@@ -8,10 +8,10 @@ jobs:
     steps:
       - uses: Azure/login@v2.1.0
         with: 
-          creds: ${{ github.AZURE_CRED }}
+          creds: ${{ env.AZURE_CRED }}
           enable-AzPSSession: true
       - uses: Azure/webapps-deploy@v2.2.12
         with:
           app-name: my-html-app
-          package: ${{ github.workspace }}
+          package: ${{ env.workspace }}
           
