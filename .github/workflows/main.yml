@@ -7,16 +7,14 @@ permissions:
       id-token: write
       contents: read
 jobs:
-      install-dotnet-CLI:
-          runs-on: ubuntu-latest
-          steps:
-            - name: .NET Core Command-Line Interface
-              # You may pin to the exact commit or the version.
-              # uses: joeltankam/dotnet-action@df3b8c41923750c7c099552722517521c7ee1bc9
-              uses: joeltankam/dotnet-action@1.0.0
-            - name: Check Dotnet version
-              run: dotnet --info
-            
+      azure-CLI-setup:
+            runs-on: ubuntu-latest 
+            steps:
+            - name: Azure CLI Action
+              uses: Azure/cli@v2.0.0
+            - name: start-with-az
+              run: az --help
+                  
         
           
       
